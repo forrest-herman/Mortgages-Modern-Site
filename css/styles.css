@@ -47,13 +47,19 @@ img {
     max-width: 200px;
 }
 
-.nav-link a {
+a.nav-link {
     color: var(--nav_text_color);
+    /* text-transform: uppercase; */
+    font-size: 18px;
 }
 
-.nav-link:not(:last-child) {
-    margin-left: 10px;
-    margin-right: 10px;
+a.nav-link:hover {
+    color: var(--nav_text_color_hover);
+}
+
+.nav-item {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* Hero */
@@ -64,6 +70,11 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     margin: 20px;
+}
+
+.hero-title h1,
+.hero-title h3 {
+    font-size: 5em;
 }
 
 .hero > div {
