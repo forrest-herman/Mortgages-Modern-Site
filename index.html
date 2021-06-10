@@ -16,10 +16,8 @@
         />
 
         <!-- Fonts -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-            rel="stylesheet"
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         <link
             rel="stylesheet"
             href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -34,11 +32,15 @@
             :root {
                 --nav_text_color: black;
                 --nav_text_color_hover: grey;
-                --color1: blue;
-                --color2: orange;
-                --bgcolor: brown;
 
-                --default_font: sans-serif;
+                --color1: #a3dae0;
+                --color2: #ff7e7e;
+                --bgcolor: white;
+
+                --default_font_color: black;
+                --default_font: "Abhaya Libre", sans-serif;
+                --header_font_weight: 800;
+                font-size: 20px;
 
                 --hero_height: calc(100vh - 40px);
 
@@ -91,10 +93,10 @@
         <section id="hero" style="background-image: url(img/neonbrand-kdwahpWYfQo-unsplash.jpg)">
             <div class="container container-sm">
                 <div class="row hero">
-                    <div class="col-12 d-flex justify-content-center align-items-center">
-                        <div class="hero-title text-center">
-                            <h1>Your Title Here</h1>
-                            <h3 class="hero-subtitle">Your Name</h3>
+                    <div class="col-12 d-flex justify-content-start align-items-center">
+                        <div class="hero-title text-left">
+                            <h1>Your <br />Title <br />Here</h1>
+                            <!-- <h3 class="hero-subtitle">Your Name</h3> -->
                         </div>
                     </div>
                 </div>
@@ -106,17 +108,33 @@
             <div class="container container-center">
                 <div class="row">
                     <div class="col">
-                        <h2>
+                        <h3>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sunt repellendus blanditiis ut! Nesciunt explicabo sit sequi accusantium culpa est natus labore? Tenetur
                             libero similique harum sit, sunt quibusdam dolores.
-                        </h2>
+                        </h3>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section id="card-section-short-title" class="section-vpadding">
+            <div class="row text-center section-short-title-offset">
+                <h2><span class="">Section </span><span class="text-color2">title.</span></h2>
+            </div>
+            <div class="section-box section-drop-shadow bg-color-1">
+                <div class="bubble">
+                    <blockquote>
+                        <p>
+                            I have been working by Jasmine through our professional networking group and Jasmine is very intelligent in her field and I enjoy listening to her explain her complex
+                            industry.
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
         <!-- Testimonials -->
-        <section id="testimonials" class="green-section">
+        <section id="testimonials" class="section-vpadding green-section">
             <div class="container">
                 <div class="row">
                     <h2>Testimonials</h2>

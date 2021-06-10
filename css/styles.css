@@ -11,6 +11,33 @@ h6,
 p,
 a {
     font-family: var(--default_font);
+    color: var(--default_font_color);
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--header_font_weight);
+}
+
+h1 {
+    font-size: 7rem;
+    color: var(--color2);
+}
+h2 {
+    font-size: 5rem;
+    /* color: var(--color2); */
+}
+
+.text-color1 {
+    color: var(--color1);
+}
+.text-color2 {
+    color: var(--color2);
 }
 
 img {
@@ -22,6 +49,25 @@ section {
     margin-left: 20px;
 }
 
+.section-vpadding {
+    padding-top: 4rem;
+    /* padding-bottom: 4rem; */
+}
+
+.section-box {
+    padding: 6rem;
+}
+
+.section-drop-shadow {
+    box-shadow: 4px 4px 18px 3px rgba(0, 0, 0, 0.5);
+}
+
+.section-short-title-offset {
+    position: relative;
+    top: 56px;
+    margin-top: -56px;
+}
+
 @media only screen and (max-width: 578px) {
     section {
         margin-right: 10px;
@@ -29,9 +75,11 @@ section {
     }
 }
 
-.section-vpadding {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+.bg-color-1 {
+    background-color: var(--color1);
+}
+.bg-color-2 {
+    background-color: var(--color2);
 }
 
 .container-center {
@@ -98,13 +146,38 @@ a.nav-link:hover {
     }
 }
 
-.hero-title h1,
-.hero-title h3 {
-    font-size: 5em;
-}
-
 .hero > div {
     height: var(--hero_height);
+}
+
+/* Blockquote Testimonial */
+
+.bubble blockquote {
+    margin: 0;
+    background-color: var(--bgcolor);
+    padding: 60px;
+    position: relative;
+    border: none;
+    font-size: 1.25em;
+}
+.bubble blockquote:before,
+.bubble blockquote:after {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f10d";
+    position: absolute;
+    font-size: 80px;
+    padding: 10px;
+    line-height: 1;
+}
+.bubble blockquote:before {
+    top: -50px;
+    left: -110px;
+}
+.bubble blockquote:after {
+    content: "\f10e";
+    right: -110px;
+    bottom: -50px;
 }
 
 /* Footer */
