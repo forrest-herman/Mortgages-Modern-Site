@@ -2,6 +2,12 @@ body {
     display: block;
 }
 
+@media only screen and (max-width: 991px) {
+    :root {
+        font-size: max(2vw, 12px);
+    }
+}
+
 h1,
 h2,
 h3,
@@ -58,14 +64,29 @@ section {
     padding: 6rem;
 }
 
-.section-drop-shadow {
+.section-box-shadow {
     box-shadow: 4px 4px 18px 3px rgba(0, 0, 0, 0.5);
+}
+.section-text-shadow {
+    text-shadow: 4px 4px 18px rgba(0, 0, 0, 0.5);
 }
 
 .section-short-title-offset {
     position: relative;
     top: 56px;
     margin-top: -56px;
+}
+
+.section-long-title-offset {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    top: 78px;
+    margin-top: -56px;
+    line-height: 0.9;
+}
+.section-long-title-offset > h2 {
+    line-height: 0.8;
 }
 
 @media only screen and (max-width: 578px) {
