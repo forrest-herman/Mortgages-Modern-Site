@@ -146,12 +146,29 @@ section {
     width: min(710px, 100%);
 }
 
+.box-picture .section-box.min-fit-content {
+    min-width: fit-content;
+}
+
 .box-picture .section-box.right {
     margin-left: auto;
 }
 
 .readmore-card {
     width: fit-content;
+}
+
+.readmore-card.contact-item:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.readmore-card h3 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.readmore-card.contact-item a {
+    text-decoration: none;
 }
 
 .right .readmore-card,
