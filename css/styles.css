@@ -38,6 +38,15 @@ h2 {
     font-size: 5rem;
     /* color: var(--color2); */
 }
+h3{
+    font-size: 4rem;
+}
+h3{
+    font-size: 2.5rem;
+}
+h4{
+    font-size: 1.5rem;
+}
 
 .text-color1 {
     color: var(--color1);
@@ -53,15 +62,25 @@ img {
 section {
     margin-right: 20px;
     margin-left: 20px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .section-vpadding {
-    padding-top: 4rem;
+    margin-top: 6rem;
     /* padding-bottom: 4rem; */
 }
 
 .section-box {
-    padding: 6rem;
+    padding: var(--base_box_padding);
+}
+
+.box-top-padding-short-title{
+    padding-top: calc( var(--base_box_padding) + 56px);
+}
+.box-top-padding-long-title{
+    padding-top: calc( var(--base_box_padding) + 78px);
 }
 
 .section-box-shadow {
@@ -87,6 +106,17 @@ section {
 }
 .section-long-title-offset > h2 {
     line-height: 0.8;
+    min-width: 50%;
+}
+
+
+.section-long-title-offset.box-picture{
+    margin-top: 156px;
+
+}
+
+.bubble.bubble-card{
+    width: min(700px,40vw);
 }
 
 @media only screen and (max-width: 578px) {
@@ -120,6 +150,16 @@ section {
     height: 100%;
     z-index: 9999;
     background: var(--loader_bg);
+}
+
+.card{
+    background:none;
+    border: none;
+}
+
+.card-icon{
+    text-align: center;
+    
 }
 
 /* Navbar */
@@ -173,7 +213,8 @@ a.nav-link:hover {
 
 /* Blockquote Testimonial */
 
-.bubble blockquote {
+.bubble blockquote,
+.bubble > p {
     margin: 0;
     background-color: var(--bgcolor);
     padding: 60px;
