@@ -167,8 +167,23 @@ section {
     padding-right: 15px;
 }
 
-.readmore-card.contact-item a {
+.readmore-card a {
     text-decoration: none;
+}
+.readmore-card {
+    transition-duration: 0.3s;
+    background-color: var(--color2);
+}
+.readmore-card:hover {
+    transition-duration: 0.3s;
+    background-color: var(--color1);
+    color: var(--color2) !important;
+}
+.readmore-card.translate-right:hover {
+    transform: translate(20px);
+}
+.readmore-card.translate-left:hover {
+    transform: translate(-20px);
 }
 
 .right .readmore-card,
