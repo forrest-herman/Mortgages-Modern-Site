@@ -23,6 +23,7 @@ a {
     font-family: var(--default_font);
     color: var(--default_font_color);
     margin-bottom: 0;
+    transition-duration: 0.25s;
 }
 
 h1,
@@ -52,6 +53,11 @@ h4 {
     font-size: 1.5rem;
 }
 
+a:hover {
+    color: var(--color2);
+    transition-duration: 0.25s;
+}
+
 .text-color1 {
     color: var(--color1);
 }
@@ -70,10 +76,12 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-.section-vpadding {
+.section-margin-top {
     margin-top: 6rem;
-    /* padding-bottom: 4rem; */
+}
+.section-v-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .section-box {
@@ -104,6 +112,9 @@ section {
 .section-text-shadow {
     text-shadow: 4px 4px 18px rgba(0, 0, 0, 0.5);
 }
+.readmore-shadow {
+    box-shadow: 10px 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
 
 .section-short-title-offset {
     position: relative;
@@ -119,17 +130,33 @@ section {
     margin-top: -3rem;
     line-height: 0.9;
 }
+.box-picture .section-long-title-offset {
+    top: 3rem;
+}
 .section-long-title-offset > h2 {
     line-height: 0.8;
     min-width: 50%;
 }
 
-.section-long-title-offset.box-picture {
+.box-picture .section-long-title-offset {
     margin-top: 156px;
 }
 
-.bubble.bubble-card {
-    width: min(500px, 100%);
+.box-picture .section-box {
+    width: min(710px, 100%);
+}
+
+.box-picture .section-box.right {
+    margin-left: auto;
+}
+
+.readmore-card {
+    width: fit-content;
+}
+
+.right .readmore-card,
+.right.readmore-card {
+    float: right;
 }
 
 @media only screen and (max-width: 578px) {
@@ -189,7 +216,7 @@ section {
 a.nav-link {
     color: var(--nav_text_color);
     /* text-transform: uppercase; */
-    font-size: 18px;
+    font-size: var(--nav_text_size);
 }
 
 a.nav-link:hover {
