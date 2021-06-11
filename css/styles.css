@@ -2,9 +2,13 @@ body {
     display: block;
 }
 
+:root {
+    font-size: var(--root_font_size);
+}
+
 @media only screen and (max-width: 991px) {
     :root {
-        font-size: max(2vw, 12px);
+        font-size: max(2vw, 9px);
     }
 }
 
@@ -38,13 +42,13 @@ h2 {
     font-size: 5rem;
     /* color: var(--color2); */
 }
-h3{
+h3 {
     font-size: 4rem;
 }
-h3{
+h3 {
     font-size: 2.5rem;
 }
-h4{
+h4 {
     font-size: 1.5rem;
 }
 
@@ -76,11 +80,22 @@ section {
     padding: var(--base_box_padding);
 }
 
-.box-top-padding-short-title{
-    padding-top: calc( var(--base_box_padding) + 56px);
+@media only screen and (max-width: 767px) {
+    .section-box {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
 }
-.box-top-padding-long-title{
-    padding-top: calc( var(--base_box_padding) + 78px);
+
+.row.section-box {
+    margin: auto;
+}
+
+.box-top-padding-short-title {
+    padding-top: calc(var(--base_box_padding) + 56px);
+}
+.box-top-padding-long-title {
+    padding-top: calc(var(--base_box_padding) + 78px);
 }
 
 .section-box-shadow {
@@ -92,16 +107,16 @@ section {
 
 .section-short-title-offset {
     position: relative;
-    top: 56px;
-    margin-top: -56px;
+    top: 3rem;
+    margin-top: -3rem;
 }
 
 .section-long-title-offset {
     position: relative;
     width: fit-content;
     margin: auto;
-    top: 78px;
-    margin-top: -56px;
+    top: 4.6rem;
+    margin-top: -3rem;
     line-height: 0.9;
 }
 .section-long-title-offset > h2 {
@@ -109,17 +124,13 @@ section {
     min-width: 50%;
 }
 
-
-.section-long-title-offset.box-picture{
+.section-long-title-offset.box-picture {
     margin-top: 156px;
-
 }
 
-.bubble.bubble-card{
-    width: min(700px,40vw);
+.bubble.bubble-card {
+    width: min(500px, 100%);
 }
-
-/* working here!!!!!!!!!!!!!!!!!!!!! */
 
 @media only screen and (max-width: 578px) {
     section {
@@ -154,14 +165,13 @@ section {
     background: var(--loader_bg);
 }
 
-.card{
-    background:none;
+.card {
+    background: none;
     border: none;
 }
 
-.card-icon{
+.card-icon {
     text-align: center;
-    
 }
 
 /* Navbar */
@@ -222,7 +232,7 @@ a.nav-link:hover {
     padding: 60px;
     position: relative;
     border: none;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 .bubble blockquote:before,
 .bubble blockquote:after {
@@ -230,18 +240,29 @@ a.nav-link:hover {
     font-weight: 900;
     content: "\f10d";
     position: absolute;
-    font-size: 80px;
+    font-size: 4rem;
     padding: 10px;
     line-height: 1;
 }
 .bubble blockquote:before {
     top: -50px;
-    left: -110px;
+    left: max(-16%, -110px);
 }
 .bubble blockquote:after {
     content: "\f10e";
-    right: -110px;
+    right: max(-16%, -110px);
     bottom: -50px;
+}
+
+@media only screen and (max-width: 767px) {
+    .bubble blockquote:before {
+        top: -10px;
+        left: 0px;
+    }
+    .bubble blockquote:after {
+        right: 0;
+        bottom: -10px;
+    }
 }
 
 /* Footer */
