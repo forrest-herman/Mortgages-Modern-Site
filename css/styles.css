@@ -21,7 +21,8 @@ h6,
 p,
 a,
 input.form-control,
-input.btn-form {
+input.btn-form,
+textarea.form-control {
     font-family: var(--default_font);
     color: var(--default_font_color);
     margin-bottom: 0;
@@ -35,7 +36,8 @@ h4,
 h5,
 h6,
 input.form-control,
-input.btn-form {
+input.btn-form,
+textarea.form-control {
     font-weight: var(--header_font_weight);
 }
 
@@ -197,9 +199,13 @@ section {
     background-color: var(--color1);
     border-radius: 0;
 }
-.readmore-card.invert *:hover {
+.readmore-card.invert-color1 *:hover {
     background-color: var(--default_font_color);
     color: var(--color1);
+}
+.readmore-card.invert *:hover {
+    background-color: var(--default_font_color);
+    color: var(--color2);
 }
 .readmore-card.translate-right:hover {
     transform: translate(20px);
@@ -352,10 +358,14 @@ a.nav-link:hover {
 .form-control {
     box-shadow: none;
     background: var(--bgcolor);
-    border: 2px solid rgba(0, 0, 0, 0);
+    border: 2px solid var(--default_font_color);
+    border-radius: 0;
     /* font-size: 14px; */
     /* font-weight: 300; */
     /* padding: 6px 10px; */
+}
+.form-control.no-outline {
+    border-color: rgba(0, 0, 0, 0);
 }
 .form-control:active,
 .form-control:focus {
@@ -364,9 +374,39 @@ a.nav-link:hover {
     border-color: var(--color2);
 }
 
-.form-group {
+.form-group:not(:first-child) {
     margin-top: 15px;
+}
+.form-group:not(:last-child) {
     margin-bottom: 15px;
 }
 
+.form-control.resize-none {
+    resize: none;
+}
+
 /* Footer */
+
+ul.social-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+.social-icons li a {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
