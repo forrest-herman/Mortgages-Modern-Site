@@ -19,7 +19,9 @@ h4,
 h5,
 h6,
 p,
-a {
+a,
+input.form-control,
+input.btn-form {
     font-family: var(--default_font);
     color: var(--default_font_color);
     margin-bottom: 0;
@@ -31,7 +33,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+input.form-control,
+input.btn-form {
     font-weight: var(--header_font_weight);
 }
 
@@ -46,10 +50,11 @@ h2 {
 h3 {
     font-size: 4rem;
 }
-h3 {
+h4 {
     font-size: 2.5rem;
 }
-h4 {
+h5,
+.btn-form {
     font-size: 1.5rem;
 }
 
@@ -67,6 +72,14 @@ a:hover {
 
 img {
     width: 100%;
+}
+
+.width-fit-content {
+    width: fit-content;
+}
+
+.height-fit-content {
+    height: fit-content;
 }
 
 section {
@@ -142,7 +155,7 @@ section {
     margin-top: 156px;
 }
 
-.box-picture .section-box {
+.box-picture .bubble {
     width: min(710px, 100%);
 }
 
@@ -162,9 +175,14 @@ section {
     margin-bottom: 1.5rem;
 }
 
-.readmore-card h3 {
+.readmore-card h3,
+.readmore-card h4,
+.readmore-card h5,
+.readmore-card .btn-form {
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .readmore-card a {
@@ -174,10 +192,14 @@ section {
     transition-duration: 0.3s;
     background-color: var(--color2);
 }
-.readmore-card:hover {
+.readmore-card *:hover {
     transition-duration: 0.3s;
     background-color: var(--color1);
-    color: var(--color2) !important;
+    border-radius: 0;
+}
+.readmore-card.invert *:hover {
+    background-color: var(--default_font_color);
+    color: var(--color1);
 }
 .readmore-card.translate-right:hover {
     transform: translate(20px);
@@ -285,7 +307,8 @@ a.nav-link:hover {
 /* Blockquote Testimonial */
 
 .bubble blockquote,
-.bubble > p {
+.bubble > p,
+.bubble > div {
     margin: 0;
     background-color: var(--bgcolor);
     padding: 60px;
@@ -322,6 +345,28 @@ a.nav-link:hover {
         right: 0;
         bottom: -10px;
     }
+}
+
+/* Form */
+
+.form-control {
+    box-shadow: none;
+    background: var(--bgcolor);
+    border: 2px solid rgba(0, 0, 0, 0);
+    /* font-size: 14px; */
+    /* font-weight: 300; */
+    /* padding: 6px 10px; */
+}
+.form-control:active,
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--color2);
+}
+
+.form-group {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 /* Footer */
