@@ -94,6 +94,9 @@ section {
 .section-margin-top {
     margin-top: 6rem;
 }
+.section-margin-bottom {
+    margin-bottom: 6rem;
+}
 .section-v-padding {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -165,7 +168,8 @@ section {
     min-width: fit-content;
 }
 
-.box-picture .section-box.right {
+.box-picture .section-box.right,
+.box-picture .section-box.right div {
     margin-left: auto;
 }
 
@@ -410,3 +414,5 @@ ul.social-icons {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+/* Test */
