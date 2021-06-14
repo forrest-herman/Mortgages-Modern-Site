@@ -6,6 +6,11 @@ body {
     font-size: var(--root_font_size);
 }
 
+::selection {
+    color: var(--default_font_color);
+    background: var(--color2);
+}
+
 @media only screen and (max-width: 991px) {
     :root {
         font-size: max(2vw, 9px);
@@ -29,6 +34,16 @@ textarea.form-control {
     transition-duration: 0.25s;
 }
 
+h1:not(a > h1),
+h2:not(a > h2),
+h3:not(a > h3),
+h4:not(a > h4),
+h5:not(a > h5),
+h6:not(a > h6),
+p:not(a > p) {
+    cursor: default;
+}
+
 h1,
 h2,
 h3,
@@ -41,13 +56,21 @@ textarea.form-control {
     font-weight: var(--header_font_weight);
 }
 
+body,
+section,
+div,
+ul,
+li,
+a {
+    transition-duration: var(--default_transition_duration);
+}
+
 h1 {
     font-size: 7rem;
     color: var(--color2);
 }
 h2 {
     font-size: 5rem;
-    /* color: var(--color2); */
 }
 h3 {
     font-size: 4rem;
@@ -60,9 +83,18 @@ h5,
     font-size: 1.5rem;
 }
 
+p {
+    font-size: max(1.25rem, 14px);
+}
+
+a {
+    /* color: var(--color2); */
+    text-decoration: underline;
+}
+
 a:hover {
     color: var(--color2);
-    transition-duration: 0.25s;
+    cursor: pointer !important;
 }
 
 .text-color1 {
@@ -74,6 +106,12 @@ a:hover {
 
 img {
     width: 100%;
+}
+
+img.inline {
+    width: auto;
+    max-width: 100%;
+    max-height: 450px;
 }
 
 .width-fit-content {
@@ -140,20 +178,21 @@ section {
     margin-top: -3rem;
 }
 
-.section-long-title-offset {
-    position: relative;
+.section-long-title {
     width: fit-content;
     margin: auto;
+}
+.section-long-title > h2 {
+    line-height: 0.8;
+    min-width: 50%;
+}
+.section-long-title-offset {
+    position: relative;
     top: 4.6rem;
     margin-top: -3rem;
-    line-height: 0.9;
 }
 .box-picture .section-long-title-offset {
     top: 3rem;
-}
-.section-long-title-offset > h2 {
-    line-height: 0.8;
-    min-width: 50%;
 }
 
 .box-picture .section-long-title-offset {
@@ -211,11 +250,17 @@ section {
     background-color: var(--default_font_color);
     color: var(--color2);
 }
-.readmore-card.translate-right:hover {
+.translate-right:hover {
     transform: translate(20px);
 }
-.readmore-card.translate-left:hover {
+.translate-left:hover {
     transform: translate(-20px);
+}
+.transition-padding-right:hover {
+    padding-right: 20px;
+}
+.transition-padding-left:hover {
+    padding-left: 20px;
 }
 
 .right .readmore-card,
@@ -237,9 +282,11 @@ section {
     background-color: var(--color2);
 }
 
-.container-center {
-    width: 60%;
-    margin: 0 auto;
+@media only screen and (min-width: 767px) {
+    .container-center {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
 
 .grey-bg {
@@ -324,7 +371,10 @@ a.nav-link:hover {
     padding: 60px;
     position: relative;
     border: none;
-    font-size: 1.25rem;
+}
+.bubble blockquote {
+    max-width: 1200px;
+    margin: auto;
 }
 .bubble blockquote:before,
 .bubble blockquote:after {
@@ -332,28 +382,30 @@ a.nav-link:hover {
     font-weight: 900;
     content: "\f10d";
     position: absolute;
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 10px;
     line-height: 1;
 }
 .bubble blockquote:before {
-    top: -50px;
-    left: max(-16%, -110px);
+    top: -80px;
+    left: max(-14%, -100px);
 }
 .bubble blockquote:after {
     content: "\f10e";
-    right: max(-16%, -110px);
-    bottom: -50px;
+    right: max(-14%, -100px);
+    bottom: -80px;
 }
 
 @media only screen and (max-width: 767px) {
     .bubble blockquote:before {
-        top: -10px;
-        left: 0px;
+        top: 10px;
+        left: 4px;
+        font-size: 30px;
     }
     .bubble blockquote:after {
-        right: 0;
-        bottom: -10px;
+        right: 4px;
+        bottom: 10px;
+        font-size: 30px;
     }
 }
 
@@ -415,4 +467,32 @@ ul.social-icons {
     padding-right: 10px;
 }
 
-/* Test */
+@media only screen and (min-width: 576px) {
+    .social-icons li:first-child a {
+        padding-left: 0;
+    }
+}
+
+.footer hr {
+    margin: 2rem 0;
+}
+
+.footer h5,
+.footer .footer-logo {
+    margin-bottom: 0.3rem;
+}
+
+ul.footer-menu {
+    list-style: none;
+    padding-left: 0rem;
+    margin: initial;
+}
+ul.footer-menu > li a {
+    text-decoration: none;
+}
+
+.footer > div > div:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+/* Extras */

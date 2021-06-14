@@ -32,7 +32,7 @@
             :root {
                 --nav_text_color: black;
                 --nav_text_color_hover: #a3dae0;
-                --nav_text_size: 1.25rem;
+                --nav_text_size: 1.5rem;
 
                 --color1: #a3dae0;
                 --color2: #ff7e7e;
@@ -48,6 +48,8 @@
                 --base_box_padding: 6rem;
 
                 --loader_bg: url(../img/loader.gif) center no-repeat #fff;
+
+                --default_transition_duration: 0.3s;
             }
         </style>
     </head>
@@ -125,46 +127,62 @@
                 <h2><span class="">Section </span><span class="text-color2">title.</span></h2>
             </div>
             <div class="row section-box box-top-padding-short-title section-box-shadow bg-color-1">
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="card">
                         <div class="card-icon">
                             <h2><i class="far fa-check"></i></h2>
                         </div>
                         <div class="card-body">
                             <!-- <h3 class="card-title">Repeat Homebuyers</h3> -->
-                            <h4 class="card-text text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non nesciunt blanditiis a</h4>
+                            <h5 class="card-text text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non nesciunt blanditiis a</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="card">
                         <div class="card-icon">
                             <h2><i class="far fa-check"></i></h2>
                         </div>
                         <div class="card-body">
                             <!-- <h3 class="card-title">Repeat Homebuyers</h3> -->
-                            <h4 class="card-text text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non nesciunt blanditiis a</h4>
+                            <h5 class="card-text text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non nesciunt blanditiis a</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-4">
                     <div class="card">
                         <div class="card-icon">
                             <h2><i class="far fa-check"></i></h2>
                         </div>
                         <div class="card-body">
                             <!-- <h3 class="card-title">Repeat Homebuyers</h3> -->
-                            <h4 class="card-text text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non nesciunt blanditiis a</h4>
+                            <h5 class="card-text text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non nesciunt blanditiis a</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="quote-section-long-title" class="section-margin-top">
-            <div class="row text-center section-long-title-offset">
+        <section id="section-long-title" class="section-margin-top">
+            <div class="row text-end section-long-title">
                 <h2>
-                    <span class="pe-5">What clients say</span>
+                    <span class="">Getting the best rates</span>
+                    <br />
+                    <span class="text-color2" style="float: right">for you.</span>
+                </h2>
+            </div>
+        </section>
+
+        <section id="section-short-title" class="section-margin-top">
+            <div class="row text-center">
+                <h2><span class="">Short </span><span class="text-color2">title.</span></h2>
+            </div>
+        </section>
+
+        <section id="quote-section-long-title" class="section-margin-top">
+            <div class="row text-end section-long-title section-long-title-offset">
+                <h2>
+                    <span class="">What clients say</span>
                     <br />
                     <span class="text-color2" style="float: right">about us.</span>
                 </h2>
@@ -181,30 +199,30 @@
             </div>
         </section>
 
-        <section id="image-pararaph-section" class="section-margin-top">
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="row overflow-visible position-absolute section-margin-top section-margin-bottom">
+        <section id="image-paragraph-section" class="section-margin-top">
+            <div class="row m-0 d-flex justify-content-center align-items-center">
+                <div class="row overflow-visible position-absolute section-margin-top section-margin-bottom d-none d-sm-block">
                     <div class="col-6 d-flex justify-content-center">
-                        <img class="section-box-shadow" style="width: 100%; max-width: 450px" src="img/jasmineProfile.jpeg" alt="" />
+                        <img class="section-box-shadow" style="width: 90%; max-width: 450px" src="img/jasmineProfile.jpeg" alt="" />
                     </div>
                 </div>
                 <div class="section-box section-box-shadow bg-color-1">
                     <div class="row justify-content-end align-items-center">
-                        <div class="col-lg-6">
-                            <img style="width: 0px" src="img/jasmineProfile.jpeg" alt="" />
-                        </div>
-                        <div class="col-sm-6 height-fit-content">
+                        <div class="col-12 col-sm-6 height-fit-content mb-sm-0 mb-4">
                             <p>
                                 About me.... Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perferendis minima ipsum exercitationem autem, consequuntur pariatur illo excepturi
                                 consequatur fugiat nobis enim sunt aperiam perspiciatis alias omnis ullam! Mollitia, ipsum!
                             </p>
+                        </div>
+                        <div class="col-12 col-sm-6 justify-content-center d-flex d-sm-none">
+                            <img class="inline" src="img/jasmineProfile.jpeg" alt="" />
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="pararaph-section" class="section-margin-top">
+        <section id="paragraph-section" class="section-margin-top">
             <div class="section-box section-box-shadow bg-color-1">
                 <p>
                     About me.... Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat perferendis minima ipsum exercitationem autem, consequuntur pariatur illo excepturi consequatur fugiat
@@ -214,7 +232,7 @@
         </section>
 
         <section id="quote-section-long-title-readmore" class="section-margin-top">
-            <div class="row text-center section-long-title-offset">
+            <div class="row text-end section-long-title section-long-title-offset">
                 <h2>
                     <span>What clients say</span>
                     <br />
@@ -237,7 +255,7 @@
         </section>
 
         <section id="img-section-left" class="section-margin-top section-box-shadow box-picture" style="background-image: url(img/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash.jpg)">
-            <div class="row text-center section-long-title-offset">
+            <div class="row text-center section-long-title section-long-title-offset">
                 <h2>
                     <span style="float: left">Get started</span>
                     <br />
@@ -255,7 +273,7 @@
         </section>
 
         <section id="img-section-readmore-left" class="section-margin-top section-box-shadow box-picture" style="background-image: url(img/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash.jpg)">
-            <div class="row text-center section-long-title-offset">
+            <div class="row text-center section-long-title section-long-title-offset">
                 <h2>
                     <span style="float: left">Get started</span>
                     <br />
@@ -276,7 +294,7 @@
         </section>
 
         <section id="img-section-contact-left" class="section-margin-top section-box-shadow box-picture" style="background-image: url(img/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash.jpg)">
-            <div class="row text-center section-long-title-offset">
+            <div class="row text-center section-long-title section-long-title-offset">
                 <h2>
                     <span style="float: left">Get started</span>
                     <br />
@@ -297,7 +315,7 @@
         </section>
 
         <section id="img-section-readmore-right" class="section-margin-top section-box-shadow box-picture" style="background-image: url(img/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash.jpg)">
-            <div class="row text-center section-long-title-offset">
+            <div class="row text-center section-long-title section-long-title-offset">
                 <h2><span>About </span><span class="text-color2">us.</span></h2>
             </div>
             <div class="section-box right">
@@ -335,7 +353,7 @@
         </section>
 
         <section id="img-section-form" class="section-margin-top section-box-shadow box-picture" style="background-image: url(img/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash.jpg)">
-            <div class="row text-center section-long-title-offset">
+            <div class="row text-end section-long-title section-long-title-offset">
                 <h2>
                     <span style="float: left">Get started</span>
                     <br />
@@ -387,46 +405,58 @@
 
         <!-- Footer -->
         <footer id="footer" class="section-margin-top section-v-padding bg-color-1">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col col-md-4">
-                        <img src="img/jasmineLogo.svg" style="max-width: 200px" />
-                        <!-- <h3>Company Logo</h3> -->
-                        <p>
-                            Mortgage Broker <br />
-                            License # 123456
-                        </p>
-                        <div>
-                            <ul class="social-icons">
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <div class="container footer">
+                <div class="row justify-content-center align-items-start">
+                    <div class="col-12 col-sm-4">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start width-fit-content m-auto ms-sm-0">
+                            <!-- <img class="footer-logo" src="img/jasmineLogo.svg" style="max-width: 200px" /> -->
+                            <h5>Company Logo</h5>
+                            <p>
+                                Mortgage Broker <br />
+                                License # 123456
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start width-fit-content m-auto">
+                            <h5>Address</h5>
+                            <p>Sudbury, ON</p>
+                            <div>
+                                <ul class="social-icons">
+                                    <li>
+                                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.pinterest.ca/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start width-fit-content m-auto">
+                            <h5>Quick Links</h5>
+                            <ul class="footer-menu">
+                                <li class="text-center text-sm-start">
+                                    <a class="transition-padding-left" href="#">Home</a>
                                 </li>
-                                <li>
-                                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <li class="text-center text-sm-start">
+                                    <a class="transition-padding-left" href="#about">About</a>
                                 </li>
-                                <li>
-                                    <a href="https://www.pinterest.ca/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                                <li class="text-center text-sm-start">
+                                    <a class="transition-padding-left" href="#testimonials">Testimonials</a>
                                 </li>
-                                <li>
-                                    <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                                <li class="text-center text-sm-start">
+                                    <a class="transition-padding-left" href="#contact">Contact</a>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col col-md-4">
-                        <!-- <img src="/Bootstrap Site/img/footer-logo.png" class="float-md-end" /> -->
-                        <h5>Address</h5>
-                        <p>Sudbury, ON</p>
-                    </div>
-                    <div class="col col-md-4">
-                        <!-- <img src="/Bootstrap Site/img/footer-logo.png" class="float-md-end" /> -->
-                        <h5>Quick Links</h5>
-                        <p>
-                            About <br />
-                            Blog <br />
-                            Etc. <br />
-                            Make it a menu!
-                        </p>
                     </div>
                 </div>
                 <hr />
