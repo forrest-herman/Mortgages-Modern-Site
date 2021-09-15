@@ -34,6 +34,22 @@ textarea.form-control {
     transition-duration: 0.25s;
 }
 
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--default_font_color) !important;
+    opacity: 0.75 !important;
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--default_font_color) !important;
+    opacity: 0.75 !important;
+}
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--default_font_color) !important;
+    opacity: 0.75 !important;
+}
+
 h1:not(a > h1),
 h2:not(a > h2),
 h3:not(a > h3),
@@ -104,6 +120,30 @@ a:hover {
     color: var(--color2);
 }
 
+.bg-color-default {
+    background-color: var(--bgcolor);
+}
+.bg-color-1 {
+    background-color: var(--color1);
+}
+.bg-color-2 {
+    background-color: var(--color2);
+}
+.bg-color-1 * {
+    color: var(--bg_1_font_color);
+}
+.bg-color-2 * {
+    color: var(--bg_2_font_color);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.hidden-childs > * {
+    visibility: hidden;
+}
+
 img {
     width: 100%;
 }
@@ -122,6 +162,33 @@ img.inline {
     height: fit-content;
 }
 
+.v-padding-large {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.v-padding-small {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.h-padding-large {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+.h-padding-small {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+@media only screen and (min-width: 768px) {
+    .h-padding-large-md {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+    .h-padding-small-md {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
+
 section {
     margin-right: 20px;
     margin-left: 20px;
@@ -129,15 +196,18 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.section-margin-top {
+
+.margin-top-large {
     margin-top: 6rem;
 }
-.section-margin-bottom {
+.margin-bottom-large {
     margin-bottom: 6rem;
 }
-.section-v-padding {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+.margin-top-small {
+    margin-top: 3rem;
+}
+.margin-bottom-small {
+    margin-bottom: 3rem;
 }
 
 .section-box {
